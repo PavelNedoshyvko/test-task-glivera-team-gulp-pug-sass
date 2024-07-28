@@ -8,7 +8,7 @@ import { filePaths } from './gulp/config/paths.js';
 import { copy } from './gulp/tasks/copy.js';
 import { copyRootFiles } from './gulp/tasks/copy-root-files.js';
 import { reset } from './gulp/tasks/reset.js';
-import { html } from './gulp/tasks/html.js';
+// import { html } from './gulp/tasks/html.js';
 import { pugTask } from './gulp/tasks/pug.js';
 import { server } from './gulp/tasks/server.js';
 import { scss } from './gulp/tasks/scss.js';
@@ -23,7 +23,7 @@ const isBuild = process.argv.includes('--build');
 const browserSyncInstance = browserSync.create();
 
 const handleServer = server.bind(null, browserSyncInstance);
-const handleHTML = html.bind(null, isBuild, browserSyncInstance);
+// const handleHTML = html.bind(null, isBuild, browserSyncInstance);
 const handlePug = pugTask.bind(null, isBuild, browserSyncInstance);
 const handleSCSS = scss.bind(null, isBuild, browserSyncInstance);
 const handleJS = javascript.bind(null, !isBuild, browserSyncInstance);
@@ -34,7 +34,7 @@ const handleImages = images.bind(null, isBuild, browserSyncInstance);
  */
 function watcher() {
 	gulp.watch(filePaths.watch.static, copy);
-	gulp.watch(filePaths.watch.html, handleHTML);
+	// gulp.watch(filePaths.watch.html, handleHTML);
 	gulp.watch(filePaths.watch.pug, handlePug);
 	gulp.watch(filePaths.watch.scss, handleSCSS);
 	gulp.watch(filePaths.watch.js, handleJS);
@@ -49,7 +49,7 @@ const fonts = gulp.series(otfToTtf, ttfToWoff, fontStyle);
 /**
  * Параллельные задачи в режиме разработки
  * */
-const devTasks = gulp.parallel(copy, copyRootFiles, createSvgSprite, handleHTML, handlePug, handleSCSS, handleJS, handleImages);
+const devTasks = gulp.parallel(copy, copyRootFiles, createSvgSprite, /*handleHTML,*/ handlePug, handleSCSS, handleJS, handleImages);
 
 /**
  * Основные задачи

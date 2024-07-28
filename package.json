@@ -33,7 +33,7 @@
 	"bugs": {
 		"url": "https://github.com/StarkElessar/gulp-2022/issues"
 	},
-	"homepage": "https://github.com/StarkElessar/gulp-2022#readme",
+	"homepage": "https://pavelnedoshyvko.github.io/test-task-glivera-team-gulp-pug-sass/",
 	"devDependencies": {
 		"@archoleat/stylelint-config-extended-scss": "^1.6.9",
 		"autoprefixer": "^10.4.14",

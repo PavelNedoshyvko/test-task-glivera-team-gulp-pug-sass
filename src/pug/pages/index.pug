@@ -7,13 +7,12 @@ html(lang="en")
 		link(rel="stylesheet" href="./css/main.min.css")
 
 	body
-		ul
-			li Item Aads
-			li Item B
-			li Item C
 
-	include ../includes/second
+		include ../includes/sidebar
 
-	.tui-pagination#tui-pagination-container
+		main
+			.dashboard
+				include ../includes/header
+				include ../includes/section
 
 	script(type="module" src='js/main.min.js')
