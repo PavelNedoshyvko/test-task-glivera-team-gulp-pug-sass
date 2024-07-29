@@ -1,4 +1,4 @@
-import { MobileChecker } from './mobile-checker';
+import { MobileChecker } from './mobile-checker.js';
 
 export class BaseHelpers {
 	static html = document.documentElement;

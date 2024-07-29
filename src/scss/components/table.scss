@@ -1,0 +1,72 @@
+table {
+	position: relative;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+thead::before {
+	content: "";
+	position: absolute;
+	width: 968px;
+	height: 1px;
+	top: 69px;
+	left: -40px;
+	background-color: $table-delimiter-color;
+}
+
+tr {
+	height: 69px;
+}
+
+th {
+	font-weight: 500;
+	font-size: 14px;
+	letter-spacing: -0.01em;
+	color: $table-header-txt-color;
+	vertical-align: middle;
+}
+
+td {
+	font-weight: 500;
+	font-size: 14px;
+	letter-spacing: -0.01em;
+	color: $table-txt-color;
+	vertical-align: middle;
+	border-bottom: 1px solid $table-delimiter-color;
+}
+
+.table__cell-status {
+	text-align: center;
+}
+
+// th::after,
+// td::after {
+// 	content: "";
+// 	display: block;
+// 	width: 100%;
+// 	height: 1px;
+// 	background-color: red;
+// }
+
+.table__cell-status-marker {
+	display: block;
+	height: 29px;
+	line-height: 29px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid;
+	border-radius: 4px;
+	text-align: center;
+
+	&.table__status--active {
+		border-color: $status-active-border-color;
+		background-color: $status-active-bg-color;
+		color: $status-active-txt-color;
+	}
+
+	&.table__status--inactive {
+		border-color: $status-inactive-border-color;
+		background-color: $status-inactive-bg-color;
+		color: $status-inactive-txt-color;
+	}
+}

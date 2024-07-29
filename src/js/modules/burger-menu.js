@@ -1,4 +1,4 @@
-import { Popup } from '../helpers/popup';
+import { Popup } from '../helpers/popup.js';
 
 export class BurgerMenu extends Popup {
 	constructor() {

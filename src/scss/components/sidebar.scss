@@ -1,0 +1,121 @@
+.sidebar {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	width: 306px;
+	padding-top: 36px;
+	padding-bottom: 76px;
+	padding-left: 28px;
+}
+
+.sidebar__logo-icon {
+	fill: $logo-color;
+}
+
+.sidebar__logo-link {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 64px;
+}
+
+.sidebar__logo-name {
+	font-weight: 600;
+	font-size: 26px;
+	letter-spacing: 0.01em;
+	margin-right: 4px;
+	color: $logo-color;
+}
+
+.sidebar__crm-version {
+	font-weight: 500;
+	font-size: 10px;
+	letter-spacing: -0.01em;
+	color: $logo-version;
+}
+
+.sidebar__menu {
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+}
+
+.sidebar__dashboard-link {
+	display: flex;
+	align-items: center;
+	padding: 11px 11px 11px 8px;
+	width: 250px;
+	border-radius: 8px;
+	color: $sidebar-menu-inactive-color;
+	transition: $transition-time;
+
+	&:hover {
+		color: $sidebar-menu-active-color;
+		background-color: $sidebar-menu-hover-color;
+
+		.sidebar__dashboard-link-icon-first {
+			fill: $sidebar-menu-hover-color;
+			stroke: $sidebar-menu-active-color;
+		}
+
+		.sidebar__dashboard-link-icon {
+			fill: $sidebar-menu-active-color;
+
+			&.reverse {
+				fill: $sidebar-menu-hover-color;
+				stroke: $sidebar-menu-active-color;
+			}
+		}
+
+		.sidebar__dashboard-link-icon-chevron {
+			stroke: $sidebar-menu-active-color;
+		}
+	}
+}
+
+.sidebar__dashboard-link-icon-first {
+	margin-right: 14px;
+	stroke-width: 1.5px;
+	fill: $sidebar-menu-active-color;
+	stroke: $sidebar-menu-inactive-color;
+	transition: $transition-time;
+}
+
+.sidebar__dashboard-link-icon {
+	margin-right: 14px;
+	stroke-width: 1.5px;
+	fill: $sidebar-menu-inactive-color;
+	transition: $transition-time;
+
+	&.reverse {
+		fill: none;
+		stroke: $sidebar-menu-inactive-color;
+	}
+}
+
+.sidebar__dashboard-link-icon-chevron {
+	margin-left: auto;
+	stroke-width: 2px;
+	fill: none;
+	stroke: $sidebar-menu-inactive-color;
+	transition: $transition-time;
+}
+
+.sidebar__avatar-wrap {
+	display: flex;
+	gap: 12px;
+	margin-top: auto;
+}
+
+.sidebar__avatar-name {
+	font-weight: 500;
+	font-size: 14px;
+	letter-spacing: 0.01em;
+	color: $title-txt-color;
+}
+
+.sidebar__avatar-position {
+	font-size: 12px;
+	letter-spacing: 0.01em;
+	color: $user-position-txt-color;
+}

@@ -81,6 +81,9 @@
 	},
 	"dependencies": {
 		"aos": "^2.3.4",
+		"jquery": "^3.7.1",
+		"normalize.css": "^8.0.1",
+		"paginationjs": "^2.6.0",
 		"swiper": "^8.4.5",
 		"tui-pagination": "^3.4.1"
 	}

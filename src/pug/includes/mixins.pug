@@ -1,8 +1,8 @@
-mixin sidebarMenu(icon, name, link)
+mixin sidebarMenu(icon, name, link, index)
 	li
-		a.sidebar__dashboard-password(href= link)
-			svg.sidebar__dashboard-password-icon(width="24" height="24")
+		a.sidebar__dashboard-link(href= link)
+			svg.sidebar__dashboard-link-icon(class=(index === 1 || index === 2) ? 'reverse' : '' width="24" height="24")
 				use(href= icon)
 			| #{name}
-			svg.sidebar__dashboard-password-icon(width="16" height="16")
+			svg.sidebar__dashboard-link-icon-chevron(width="16" height="16")
 				use(href="./images/icons.svg#icon-chevron-right")

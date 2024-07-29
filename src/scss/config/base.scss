@@ -1,68 +1,38 @@
-@import "functions";
-@import "mixins";
+@import "../config/mixins.scss";
 
-/** Базовые анимации: */
-@import "keyframes";
-
-/** Стили для полноэкранного блока: */
-// @import "fullscreen";
-
-/*
-* (i) Стили будут применяться ко
-* всем классам содержащим *__container
-* Например header__container, main__container и т.д.
-*/
-[class*="__container"] {
-	margin-inline: auto;
-	max-inline-size: rem($max-width-container);
-	padding-inline: rem($main-offset);
+html {
+	scroll-behavior: smooth;
 }
 
-// Стили отзывчивых картинок (IBG) ============================================
-.ibg {
-	position: relative;
+body {
+	min-height: 100vh;
 
-	img {
-		position: absolute;
-		inset-block-start: 0;
-		inset-inline-start: 0;
-		object-fit: cover;
-		block-size: 100%;
-		inline-size: 100%;
+	width: 100%;
+	max-width: 430px;
+	margin: 0 auto;
+	padding: 0 15px;
+
+	@include viewport-desktop {
+		max-width: 1440px;
+		// padding: 0 91px;
 	}
 
-	&_contain {
-		img {
-			object-fit: contain;
-		}
-	}
+	background-color: #fff;
+	color: #292d32;
+	font-family: "Poppins", sans-serif;
+	// font-weight: 500;
+	// font-size: 14px;
+	// text-align: center;
 }
 
-// Оболочка ===================================================================
-.wrapper {
-	display: flex;
-	min-block-size: 100%;
+.container {
+	width: 100%;
+	max-width: 430px;
+	margin: 0 auto;
+	padding: 0 15px;
 
-	/** Поменять на clip - если используется в проекте position: sticky */
-	overflow: hidden;
-	flex-direction: column;
-}
-
-.page {
-	position: relative;
-	flex: 1 1 auto;
-
-	[data-observ] {
-		pointer-events: none;
-		position: absolute;
-		inset-block-start: 0;
-		inset-inline-start: 0;
-		block-size: rem(2);
-		inline-size: 100%;
-		background: transparent;
-	}
-
-	&_start {
-		padding-block-start: rem($header-height);
+	@include viewport-desktop {
+		max-width: 1440px;
+		padding: 0 91px;
 	}
 }

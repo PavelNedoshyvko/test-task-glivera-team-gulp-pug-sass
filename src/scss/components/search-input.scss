@@ -1,0 +1,30 @@
+.section__search-input-wrap {
+	position: relative;
+	margin-left: 506px;
+}
+
+.section__search-input {
+	width: 216px;
+	height: 38px;
+	padding-left: 40px;
+	border-radius: 10px;
+	border: none;
+	background-color: $search-input-bg-color;
+	font-size: 12px;
+
+	&::placeholder {
+		letter-spacing: -0.01em;
+		color: $search-placeholder-color;
+	}
+}
+
+.section__search-input-icon {
+	position: absolute;
+	top: 7px;
+	left: 8px;
+}
+
+.section__search-input-icon {
+	fill: none;
+	stroke: $search-icon-color;
+}

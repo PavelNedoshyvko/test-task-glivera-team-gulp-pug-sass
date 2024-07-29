@@ -31,25 +31,28 @@ include mixins
 
 
 aside.sidebar
-	a.sidebar__logo(href="./index.html")
-		svg.sidebar__logo-icon(width="37" height="37")
-			use(href="./images/icons.svg#icon-logo")
-		|	Dashboard
-		span v.01
+	div
+		a.sidebar__logo-link(href="./index.html")
+			svg.sidebar__logo-icon(width="37" height="37")
+				use(href="./images/icons.svg#icon-logo")
+			div
+				span.sidebar__logo-name Dashboard
+				span.sidebar__crm-version v.01
 
-	ul.sidebar__menu
-		li
-			a.sidebar__dashboard-password(href="#")
-				svg.sidebar__dashboard-password-icon(width="24" height="24")
-					use(href="./images/icons.svg#icon-dashboard")
-				|	Dashboard
+		ul.sidebar__menu
+			li
+				a.sidebar__dashboard-link(href="#")
+					svg.sidebar__dashboard-link-icon-first(width="24" height="24")
+						use(href="./images/icons.svg#icon-dashboard")
+					|	Dashboard
 
-		for item in menuData
-			+sidebarMenu(item.icon, item.name, item.link)
+			for item, index in menuData
+				+sidebarMenu(item.icon, item.name, item.link, index)
 
 	.sidebar__avatar-wrap
 		img.sidebar__avatar-img(src="./images/avatar-evano.webp" alt="Avatar Evano" width="42")
-		p
-			span.sidebar__avatar-name Evano
-		p
-			span.sidebar__avatar-position Project Manager
+		div
+			p
+				span.sidebar__avatar-name Evano
+			p
+				span.sidebar__avatar-position Project Manager

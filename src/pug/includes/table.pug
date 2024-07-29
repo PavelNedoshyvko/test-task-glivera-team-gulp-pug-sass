@@ -76,7 +76,7 @@ table
 			th Phone Number
 			th Email
 			th Country
-			th Status
+			th.table__cell-status Status
 	tbody
 		for item in tableData
 			tr.table__row-body
@@ -85,5 +85,5 @@ table
 				td #{item.phone}
 				td #{item.email}
 				td #{item.country}
-				td
-					span(class= item.status ? 'table__status--active' : 'table__status--inactive')= item.status ? 'Active' : 'Inactive'
+				td.table__cell-status
+					span.table__cell-status-marker(class= item.status ? 'table__status--active' : 'table__status--inactive')= item.status ? 'Active' : 'Inactive'

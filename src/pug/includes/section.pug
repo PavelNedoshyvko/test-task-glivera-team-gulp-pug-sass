@@ -1,13 +1,15 @@
 section.section
-	h2.section__name All Customers
-	p.section__desc Active Members
+	.section__table-top
+		div
+			h2.section__name All Customers
+			p.section__desc Active Members
 	
-	include search-input
+		include search-input
 	include table
 
-footer
+	footer
 
-	p.section__show-data Showing data 1 to 8 of  256K entries
+		p.section__show-data Showing data 1 to 8 of  256K entries
 
-	.pagination-wrapper
-		.tui-pagination#tui-pagination-container
+		.pagination-wrapper
+			.tui-pagination#pagination

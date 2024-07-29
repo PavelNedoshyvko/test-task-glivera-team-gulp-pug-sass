@@ -1,16 +1,29 @@
-// отступы безопасности для контейнера
-$main-offset: 15;
+$logo-color: #000000;
+$logo-version: #838383;
+$sidebar-menu-inactive-color: #9197b3;
+$sidebar-menu-active-color: #ffffff;
+$sidebar-menu-hover-color: #5932ea;
+$title-txt-color: #000000;
+$user-position-txt-color: #757575;
+$filter-txt-color: #16c098;
+$table-header-txt-color: #b5b7c0;
+$table-txt-color: #292d32;
+$table-delimiter-color: #eeeeee;
+$footer-txt-color: #b5b7c0;
+$search-icon-color: #7e7e7e;
+$search-input-bg-color: #f9fbff;
+$search-placeholder-color: #b5b7c0;
+$status-active-border-color: #00b087;
+$status-active-bg-color: rgba(22, 192, 152, 0.38);
+$status-active-txt-color: #008767;
+$status-inactive-border-color: #df0404;
+$status-inactive-bg-color: #ffc5c5;
+$status-inactive-txt-color: #df0404;
 
-// максимальная ширина страницы
-$max-width: 1920;
+$sidebar-bg-color: #ffffff;
+$section-bg-color: #fafbff;
+$table-bg-color: #ffffff;
+$search-input-bg-color: #f9fbff;
 
-// минимальная ширина телефона
-$min-width: 320;
-
-// ширина контейнера из макета
-$container-width: 1160;
-
-// ширина контейнера с учетом padding слева и справа
-$max-width-container: $container-width + ($main-offset * 2);
-$header-height: 100;
-$footer-height: 100;
+$mobile-menu-bg-color: #001531;
+$transition-time: 250ms cubic-bezier(0.4, 0, 0.2, 1);

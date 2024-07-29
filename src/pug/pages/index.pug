@@ -7,12 +7,12 @@ html(lang="en")
 		link(rel="stylesheet" href="./css/main.min.css")
 
 	body
+		.dashboard-page-wrap
+			include ../includes/sidebar
 
-		include ../includes/sidebar
-
-		main
-			.dashboard
-				include ../includes/header
-				include ../includes/section
+			main
+				.dashboard
+					include ../includes/header
+					include ../includes/section
 
 	script(type="module" src='js/main.min.js')

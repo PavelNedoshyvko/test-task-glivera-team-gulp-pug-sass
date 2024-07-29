@@ -10,14 +10,16 @@
 // import AOS from 'aos'
 // import Swiper, { Navigation, Pagination } from 'swiper';
 
-import '../js/modules/tui-pagination';
 
 
-import { BaseHelpers } from './helpers/base-helpers';
-import { PopupManager } from './modules/popup-manager';
-import { BurgerMenu } from './modules/burger-menu';
-import { Tabs } from './modules/tabs';
-import { Accordion } from './modules/accordion';
+import '../js/modules/tui-pagination.js';
+
+
+import { BaseHelpers } from './helpers/base-helpers.js';
+import { PopupManager } from './modules/popup-manager.js';
+import { BurgerMenu } from './modules/burger-menu.js';
+import { Tabs } from './modules/tabs.js';
+import { Accordion } from './modules/accordion.js';
 
 BaseHelpers.checkWebpSupport();
 
