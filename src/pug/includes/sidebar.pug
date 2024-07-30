@@ -30,7 +30,7 @@ include mixins
 	]
 
 
-aside.sidebar
+aside.sidebar.js-menu-container
 	div
 		a.sidebar__logo-link(href="./index.html")
 			svg.sidebar__logo-icon(width="37" height="37")
@@ -41,7 +41,7 @@ aside.sidebar
 
 		ul.sidebar__menu
 			li
-				a.sidebar__dashboard-link(href="#")
+				a.sidebar__dashboard-link.toastr(href="#")
 					svg.sidebar__dashboard-link-icon-first(width="24" height="24")
 						use(href="./images/icons.svg#icon-dashboard")
 					|	Dashboard

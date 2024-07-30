@@ -14,6 +14,10 @@
 
 import '../js/modules/tui-pagination.js';
 
+import './modules/update-сlass.js';
+import './modules/mobile-menu.js';
+import './modules/toastr.js';
+
 
 import { BaseHelpers } from './helpers/base-helpers.js';
 import { PopupManager } from './modules/popup-manager.js';

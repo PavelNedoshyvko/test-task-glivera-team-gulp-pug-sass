@@ -1,14 +1,24 @@
+@import "../config/mixins.scss";
+
 footer {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	padding-top: 30px;
+
+	@include viewport-desktop {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-top: 15px;
+	}
 }
 
-.section__show-data {
-	font-weight: 500;
-	font-size: 14px;
-	letter-spacing: -0.01em;
+.footer__show-data {
+	margin-bottom: 20px;
+	text-align: center;
 	color: $footer-txt-color;
+
+	@include viewport-desktop {
+		margin-bottom: 0;
+	}
 }
 
 .tui-more {

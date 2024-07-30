@@ -1,35 +1,57 @@
+@import "../config/mixins.scss";
+
 .dashboard {
-	height: 100vh;
-	padding-top: 41px;
-	padding-left: 71px;
-	padding-right: 95px;
+	min-height: 100vh;
+	padding-top: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
 	background-color: $section-bg-color;
+
+	@include viewport-desktop {
+		padding-top: 41px;
+		padding-left: 71px;
+		padding-right: 95px;
+	}
 }
 
 .section {
-	width: 968px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
 	border-radius: 30px;
-	padding-top: 30px;
-	padding-bottom: 40px;
-	padding-left: 38px;
-	padding-right: 40px;
 	background-color: #fff;
+
+	@include viewport-desktop {
+		width: 968px;
+		padding-top: 30px;
+		padding-bottom: 40px;
+		padding-left: 38px;
+		padding-right: 40px;
+	}
 }
 
 .section__table-top {
-	display: flex;
-	margin-bottom: 40px;
+	@include viewport-desktop {
+		display: flex;
+		margin-bottom: 15px;
+	}
 }
 
 .section__name {
+	margin-bottom: 7px;
 	font-weight: 600;
 	font-size: 22px;
-	letter-spacing: -0.01em;
 	color: $title-txt-color;
 }
 
 .section__desc {
-	font-size: 14px;
-	letter-spacing: -0.01em;
+	display: block;
+	margin-bottom: 35px;
+	font-weight: 400;
 	color: $filter-txt-color;
+
+	@include viewport-desktop {
+		margin-bottom: 0;
+	}
 }

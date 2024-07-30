@@ -1,37 +1,68 @@
+@import "../config/mixins.scss";
+
+.table-container {
+	overflow: hidden;
+	overflow-x: auto;
+	white-space: nowrap;
+
+	@include viewport-desktop {
+		overflow: visible;
+		overflow-x: visible;
+		white-space: normal;
+	}
+}
+
 table {
 	position: relative;
 	width: 100%;
-	border-collapse: collapse;
+	margin-bottom: 3px;
+
+	@include viewport-desktop {
+		margin-bottom: 0;
+	}
 }
 
 thead::before {
 	content: "";
 	position: absolute;
-	width: 968px;
+	width: 100%;
 	height: 1px;
 	top: 69px;
 	left: -40px;
 	background-color: $table-delimiter-color;
+
+	@include viewport-desktop {
+		width: 968px;
+	}
 }
 
 tr {
 	height: 69px;
 }
 
+@include viewport-desktop {
+	@for $i from 1 through 5 {
+		th:nth-child(#{$i}),
+		td:nth-child(#{$i}) {
+			width: nth((172px, 131px, 156px, 207px, 152px), $i);
+		}
+	}
+}
+
 th {
-	font-weight: 500;
-	font-size: 14px;
-	letter-spacing: -0.01em;
-	color: $table-header-txt-color;
+	position: relative;
 	vertical-align: middle;
+	color: $table-header-txt-color;
+	text-align: start;
+
+	@include viewport-desktop {
+		position: static;
+	}
 }
 
 td {
-	font-weight: 500;
-	font-size: 14px;
-	letter-spacing: -0.01em;
+	@extend th;
 	color: $table-txt-color;
-	vertical-align: middle;
 	border-bottom: 1px solid $table-delimiter-color;
 }
 
@@ -39,17 +70,9 @@ td {
 	text-align: center;
 }
 
-// th::after,
-// td::after {
-// 	content: "";
-// 	display: block;
-// 	width: 100%;
-// 	height: 1px;
-// 	background-color: red;
-// }
-
 .table__cell-status-marker {
 	display: block;
+	width: 80px;
 	height: 29px;
 	line-height: 29px;
 	margin-left: auto;
@@ -68,5 +91,34 @@ td {
 		border-color: $status-inactive-border-color;
 		background-color: $status-inactive-bg-color;
 		color: $status-inactive-txt-color;
+	}
+}
+
+th:not(:last-child),
+td:not(:last-child) {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+th:last-child,
+td:last-child {
+	position: sticky;
+	padding-left: 20px;
+	right: 0;
+	background: #ffffff;
+}
+
+@include viewport-desktop {
+	th:not(:last-child),
+	td:not(:last-child) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	th:last-child,
+	td:last-child {
+		position: static;
+		padding-left: 0;
+		z-index: 0;
 	}
 }

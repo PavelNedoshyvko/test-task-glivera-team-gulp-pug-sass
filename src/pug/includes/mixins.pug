@@ -1,6 +1,6 @@
 mixin sidebarMenu(icon, name, link, index)
 	li
-		a.sidebar__dashboard-link(href= link)
+		a.sidebar__dashboard-link.update-class(data-index=index href=link)
 			svg.sidebar__dashboard-link-icon(class=(index === 1 || index === 2) ? 'reverse' : '' width="24" height="24")
 				use(href= icon)
 			| #{name}

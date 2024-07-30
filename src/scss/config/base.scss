@@ -6,33 +6,21 @@ html {
 
 body {
 	min-height: 100vh;
-
-	width: 100%;
-	max-width: 430px;
-	margin: 0 auto;
-	padding: 0 15px;
-
-	@include viewport-desktop {
-		max-width: 1440px;
-		// padding: 0 91px;
-	}
-
 	background-color: #fff;
-	color: #292d32;
 	font-family: "Poppins", sans-serif;
-	// font-weight: 500;
-	// font-size: 14px;
-	// text-align: center;
+	font-weight: 500;
+	font-size: 14px;
+	letter-spacing: -0.01em;
+	background-color: #000000;
 }
 
 .container {
 	width: 100%;
 	max-width: 430px;
 	margin: 0 auto;
-	padding: 0 15px;
+	padding: 0;
 
 	@include viewport-desktop {
 		max-width: 1440px;
-		padding: 0 91px;
 	}
 }
