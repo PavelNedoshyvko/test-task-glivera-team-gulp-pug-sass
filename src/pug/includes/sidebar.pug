@@ -39,15 +39,16 @@ aside.sidebar.js-menu-container
 				span.sidebar__logo-name Dashboard
 				span.sidebar__crm-version v.01
 
-		ul.sidebar__menu
-			li
-				a.sidebar__dashboard-link.toastr(href="#")
-					svg.sidebar__dashboard-link-icon-first(width="24" height="24")
-						use(href="./images/icons.svg#icon-dashboard")
-					|	Dashboard
+		nav
+			ul.sidebar__menu
+				li
+					a.sidebar__dashboard-link.toastr(href="#")
+						svg.sidebar__dashboard-link-icon-first(width="24" height="24")
+							use(href="./images/icons.svg#icon-dashboard")
+						|	Dashboard
 
-			for item, index in menuData
-				+sidebarMenu(item.icon, item.name, item.link, index)
+				for item, index in menuData
+					+sidebarMenu(item.icon, item.name, item.link, index)
 
 	.sidebar__avatar-wrap
 		img.sidebar__avatar-img(src="./images/avatar-evano.webp" alt="Avatar Evano" width="42")
